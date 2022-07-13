@@ -1,4 +1,18 @@
-## Laços de repetição
+## Laços de repetição (Loops)
+
+for ([expresaoInicial]; [condicao]; [incremento]) {
+    [execucao]
+}
+
+-----
+while ([condicao]) {
+    [execucao]
+}
+
+-----
+do {
+    [execucao]
+} while ([condicao]);
 
 ```
 // fazer a revisão do carro aos 10km
@@ -48,3 +62,9 @@ for (let i = 0; i < alunos.length; i++) {
   console.log(`---------`)
 }
 
+// While
+
+let i = 0; //a variável precisa ser declarada antes
+while (i <> 10) {
+    i++;
+}
