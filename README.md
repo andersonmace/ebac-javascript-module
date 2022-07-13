@@ -1,6 +1,6 @@
 # ebac-javascript-module
  
-## Code Together
+## Code Together (Módulo 13)
 
 ### Lista de exercício
 
