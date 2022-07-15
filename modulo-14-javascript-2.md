@@ -68,3 +68,21 @@ let i = 0; //a variável precisa ser declarada antes
 while (i <> 10) {
     i++;
 }
+
+## Funções
+
+- Evitar a repetição de código
+- Realizar chamadas dinâmicas de algoritmos
+
+function calcuarMedia(notas) {
+    let soma = 0;
+    for(let i =0; i < soma.length; i++) {
+        soma += notas[i];
+    }
+
+    media = soma / notas.length;
+
+    return media;
+}
+
+console.log(calcularMedia([8, 8]));
