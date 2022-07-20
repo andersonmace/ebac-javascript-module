@@ -74,9 +74,13 @@ while (i <> 10) {
 - Evitar a repetição de código
 - Realizar chamadas dinâmicas de algoritmos
 
-function calcuarMedia(notas) {
-    let soma = 0;
-    for(let i =0; i < soma.length; i++) {
+//let notas = [8, 8]; //escopo global
+
+function calcularMedia(notas) {
+
+    let soma = 0; //escopo local
+    
+    for (let i = 0; i < notas.length; i++) {
         soma += notas[i];
     }
 
@@ -85,4 +89,17 @@ function calcuarMedia(notas) {
     return media;
 }
 
-console.log(calcularMedia([8, 8]));
+
+function aprovacao(notas) {
+
+	let media = calcularMedia(notas);
+
+	let condicao = media >= 7 ? "Aprovado" : "Reprovado";
+  
+  return `Média: ${media} - Resultado: ${condicao}`;
+}
+
+console.log(aprovacao([7, 8, 5]));
+
+//console.log(`Média: ` + calcularMedia([5, 5, 6, 9]) + aprovacao([5, 5, 6, 9]));
+//console.log(aprovacao(media));
