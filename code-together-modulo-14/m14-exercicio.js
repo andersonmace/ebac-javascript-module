@@ -1,4 +1,4 @@
-//1. Resolva as operações:
+ //1. Resolva as operações:
 
 // 10 + 15                  = 25
 // “10” + 2                 = "102"
@@ -28,6 +28,47 @@
 // “5” * 2 > 9              = 10 > 9 - true
 // (10 + 10) * 2            = 20 * 2 == 40
 // 10 + 10 * 2              = 10 + 20 == 30
+
+function somaValores(valores) {
+    
+    let soma = [];
+    
+    for (let i = 0; i < valores.length; i++) {
+        soma += valores[i];
+    }
+
+    valoresSomados = soma;
+
+    return valoresSomados;
+}
+
+document.addEventListener('submit', (e) => { 
+    //Evita o comportamento padrão do submit
+    e.preventDefault();
+    //Faz com o que o submit seja acionado somente apartir do event listener
+    e.stopPropagation();
+
+    let formulario = document.querySelector('#form-01');
+    // Captura dados de formulários
+    let dados = new FormData(formulario);
+    let objeto = {};
+    let valores = [];
+
+    //percorrer todas as chaves dos dados
+    for (let key of dados.keys()) { 
+        
+        objeto[key] = dados.get(key);
+        // notas += parseInt(dados.get(key));
+        //push adiciona valores no array
+        valores.push( dados.get(key) );
+
+    } 
+
+    texto = somaValores(valores);
+    document.querySelector('#resultado').innerHTML = texto;
+    console.log(valores);
+    console.log(objeto);
+});
 
 //2. Responda as perguntas de acordo com as variáveis.
 
